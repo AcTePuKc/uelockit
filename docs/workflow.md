@@ -4,6 +4,13 @@ title: Workflow
 permalink: /workflow/
 ---
 
+<nav class="doc-nav">
+  <a href="{{ '/' | relative_url }}">Home</a>
+  <a href="{{ '/quickstart/' | relative_url }}">Quickstart</a>
+  <a href="{{ '/tools/' | relative_url }}">Tools</a>
+  <a href="{{ '/iostore-packaging/' | relative_url }}">Packaging</a>
+</nav>
+
 # Workflow
 
 ## High-level flow
@@ -137,3 +144,8 @@ Build without automatic deployment:
   -TranslationFormat json `
   -DeployToGame $false
 ```
+
+<nav class="doc-nav">
+  <a href="{{ '/quickstart/' | relative_url }}">Previous: Quickstart</a>
+  <a href="{{ '/tools/' | relative_url }}">Next: Tools</a>
+</nav>

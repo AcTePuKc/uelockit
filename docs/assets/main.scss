@@ -34,12 +34,58 @@ a:hover {
   color: #f9fafb;
 }
 
+.doc-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin: 0 0 1.5rem;
+  padding: 0.85rem 1rem;
+  background-color: #0f172a;
+  border: 1px solid #243041;
+  border-radius: 10px;
+}
+
+.doc-nav a {
+  color: #bfdbfe;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.doc-nav a:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 pre,
 code,
-blockquote {
+blockquote,
+.highlighter-rouge .highlight,
+.highlight {
   background-color: #1f2937;
   border-color: #374151;
   color: #e5e7eb;
+}
+
+pre,
+.highlighter-rouge .highlight,
+.highlight {
+  padding: 0.9rem 1rem;
+  border-radius: 10px;
+  overflow-x: auto;
+}
+
+code {
+  color: #f9fafb;
+}
+
+.highlight pre,
+.highlight code,
+.highlighter-rouge pre,
+.highlighter-rouge code,
+.highlight span,
+.highlight .w {
+  color: #e5e7eb !important;
+  background: transparent !important;
 }
 
 table th,

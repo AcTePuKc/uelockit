@@ -4,6 +4,14 @@ title: Home
 permalink: /
 ---
 
+<nav class="doc-nav">
+  <a href="{{ '/' | relative_url }}">Home</a>
+  <a href="{{ '/quickstart/' | relative_url }}">Quickstart</a>
+  <a href="{{ '/workflow/' | relative_url }}">Workflow</a>
+  <a href="{{ '/tools/' | relative_url }}">Tools</a>
+  <a href="{{ '/iostore-packaging/' | relative_url }}">Packaging</a>
+</nav>
+
 # UELocKit
 
 `UELocKit` is a small toolkit for building Unreal Engine localization mods from existing in-game strings.
@@ -49,3 +57,7 @@ Users are expected to provide their own:
 - local tool installations
 
 This repo documents the workflow and provides scripts. It does not ship the extra files needed from a specific game installation.
+
+<nav class="doc-nav">
+  <a href="{{ '/quickstart/' | relative_url }}">Next: Quickstart</a>
+</nav>

@@ -4,6 +4,13 @@ title: Quickstart
 permalink: /quickstart/
 ---
 
+<nav class="doc-nav">
+  <a href="{{ '/' | relative_url }}">Home</a>
+  <a href="{{ '/workflow/' | relative_url }}">Workflow</a>
+  <a href="{{ '/tools/' | relative_url }}">Tools</a>
+  <a href="{{ '/iostore-packaging/' | relative_url }}">Packaging</a>
+</nav>
+
 # Quickstart
 
 This is the shortest path from a source `.locres` file to a buildable translation workspace.
@@ -186,3 +193,8 @@ If a specific game turns out to care about load order, chunk naming, or platform
 - bundled third-party tools
 
 You must supply those yourself.
+
+<nav class="doc-nav">
+  <a href="{{ '/' | relative_url }}">Previous: Home</a>
+  <a href="{{ '/workflow/' | relative_url }}">Next: Workflow</a>
+</nav>

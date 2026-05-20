@@ -5,7 +5,8 @@ permalink: /tools/
 ---
 
 <nav class="doc-nav">
-  <a href="{{ '/' | relative_url }}">Home</a>
+  <a href="{{ '/' | relative_url }}">EN</a>
+  <a href="{{ '/i18n/bg/tools/' | relative_url }}">BG</a>
   <a href="{{ '/quickstart/' | relative_url }}">Quickstart</a>
   <a href="{{ '/workflow/' | relative_url }}">Workflow</a>
   <a href="{{ '/iostore-packaging/' | relative_url }}">Packaging</a>
@@ -149,6 +150,7 @@ What it does not provide:
 - game-specific reverse engineering beyond this workflow
 
 <nav class="doc-nav">
+  <a href="{{ '/i18n/bg/tools/' | relative_url }}">Read this page in Bulgarian</a>
   <a href="{{ '/workflow/' | relative_url }}">Previous: Workflow</a>
   <a href="{{ '/iostore-packaging/' | relative_url }}">Next: Packaging</a>
 </nav>

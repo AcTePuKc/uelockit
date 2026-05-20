@@ -5,7 +5,8 @@ permalink: /quickstart/
 ---
 
 <nav class="doc-nav">
-  <a href="{{ '/' | relative_url }}">Home</a>
+  <a href="{{ '/' | relative_url }}">EN</a>
+  <a href="{{ '/i18n/bg/quickstart/' | relative_url }}">BG</a>
   <a href="{{ '/workflow/' | relative_url }}">Workflow</a>
   <a href="{{ '/tools/' | relative_url }}">Tools</a>
   <a href="{{ '/iostore-packaging/' | relative_url }}">Packaging</a>
@@ -195,6 +196,7 @@ If a specific game turns out to care about load order, chunk naming, or platform
 You must supply those yourself.
 
 <nav class="doc-nav">
+  <a href="{{ '/i18n/bg/quickstart/' | relative_url }}">Read this page in Bulgarian</a>
   <a href="{{ '/' | relative_url }}">Previous: Home</a>
   <a href="{{ '/workflow/' | relative_url }}">Next: Workflow</a>
 </nav>

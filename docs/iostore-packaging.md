@@ -5,7 +5,8 @@ permalink: /iostore-packaging/
 ---
 
 <nav class="doc-nav">
-  <a href="{{ '/' | relative_url }}">Home</a>
+  <a href="{{ '/' | relative_url }}">EN</a>
+  <a href="{{ '/i18n/bg/' | relative_url }}">BG</a>
   <a href="{{ '/quickstart/' | relative_url }}">Quickstart</a>
   <a href="{{ '/workflow/' | relative_url }}">Workflow</a>
   <a href="{{ '/tools/' | relative_url }}">Tools</a>
@@ -43,5 +44,6 @@ The pattern is reusable, but each game may differ in:
 
 <nav class="doc-nav">
   <a href="{{ '/tools/' | relative_url }}">Previous: Tools</a>
+  <a href="{{ '/i18n/bg/' | relative_url }}">Open Bulgarian version</a>
   <a href="{{ '/' | relative_url }}">Back to Home</a>
 </nav>

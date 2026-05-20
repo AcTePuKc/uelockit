@@ -5,7 +5,8 @@ permalink: /
 ---
 
 <nav class="doc-nav">
-  <a href="{{ '/' | relative_url }}">Home</a>
+  <a href="{{ '/' | relative_url }}">EN</a>
+  <a href="{{ '/i18n/bg/' | relative_url }}">BG</a>
   <a href="{{ '/quickstart/' | relative_url }}">Quickstart</a>
   <a href="{{ '/workflow/' | relative_url }}">Workflow</a>
   <a href="{{ '/tools/' | relative_url }}">Tools</a>
@@ -59,5 +60,6 @@ Users are expected to provide their own:
 This repo documents the workflow and provides scripts. It does not ship the extra files needed from a specific game installation.
 
 <nav class="doc-nav">
+  <a href="{{ '/i18n/bg/' | relative_url }}">Read this page in Bulgarian</a>
   <a href="{{ '/quickstart/' | relative_url }}">Next: Quickstart</a>
 </nav>

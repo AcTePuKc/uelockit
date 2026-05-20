@@ -5,7 +5,8 @@ permalink: /workflow/
 ---
 
 <nav class="doc-nav">
-  <a href="{{ '/' | relative_url }}">Home</a>
+  <a href="{{ '/' | relative_url }}">EN</a>
+  <a href="{{ '/i18n/bg/workflow/' | relative_url }}">BG</a>
   <a href="{{ '/quickstart/' | relative_url }}">Quickstart</a>
   <a href="{{ '/tools/' | relative_url }}">Tools</a>
   <a href="{{ '/iostore-packaging/' | relative_url }}">Packaging</a>
@@ -146,6 +147,7 @@ Build without automatic deployment:
 ```
 
 <nav class="doc-nav">
+  <a href="{{ '/i18n/bg/workflow/' | relative_url }}">Read this page in Bulgarian</a>
   <a href="{{ '/quickstart/' | relative_url }}">Previous: Quickstart</a>
   <a href="{{ '/tools/' | relative_url }}">Next: Tools</a>
 </nav>

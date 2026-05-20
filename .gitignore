@@ -1,0 +1,21 @@
+# Local extracted game inputs
+source/
+Engine/
+
+# Local build outputs
+output/
+pak-output/
+pak-staging/
+
+# Local working files
+working/
+
+# Local machine config
+config/UELocKit.config.psd1
+
+# Tool-side temp files
+tools/filelist-*.txt
+
+# OS/editor noise
+.DS_Store
+Thumbs.db

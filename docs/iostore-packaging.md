@@ -4,6 +4,13 @@ title: IO Store Packaging
 permalink: /iostore-packaging/
 ---
 
+<nav class="doc-nav">
+  <a href="{{ '/' | relative_url }}">Home</a>
+  <a href="{{ '/quickstart/' | relative_url }}">Quickstart</a>
+  <a href="{{ '/workflow/' | relative_url }}">Workflow</a>
+  <a href="{{ '/tools/' | relative_url }}">Tools</a>
+</nav>
+
 # IO Store Packaging
 
 Some Unreal Engine games expect localization content inside IO Store packaging rather than as loose files alone.
@@ -33,3 +40,8 @@ The pattern is reusable, but each game may differ in:
 - mount paths
 - required culture codes
 - whether IO Store conversion is needed at all
+
+<nav class="doc-nav">
+  <a href="{{ '/tools/' | relative_url }}">Previous: Tools</a>
+  <a href="{{ '/' | relative_url }}">Back to Home</a>
+</nav>

@@ -1,3 +1,9 @@
+---
+layout: page
+title: Tools
+permalink: /tools/
+---
+
 # Tools
 
 `UELocKit` uses a bring-your-own-tools model.

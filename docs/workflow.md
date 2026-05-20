@@ -1,3 +1,9 @@
+---
+layout: page
+title: Workflow
+permalink: /workflow/
+---
+
 # Workflow
 
 ## High-level flow

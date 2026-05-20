@@ -1,3 +1,9 @@
+---
+layout: page
+title: IO Store Packaging
+permalink: /iostore-packaging/
+---
+
 # IO Store Packaging
 
 Some Unreal Engine games expect localization content inside IO Store packaging rather than as loose files alone.

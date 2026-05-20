@@ -1,3 +1,9 @@
+---
+layout: page
+title: Home
+permalink: /
+---
+
 # UELocKit
 
 `UELocKit` is a small toolkit for building Unreal Engine localization mods from existing in-game strings.

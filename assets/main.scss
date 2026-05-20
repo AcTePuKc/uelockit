@@ -1,0 +1,48 @@
+---
+---
+
+@import "minima";
+
+body {
+  background-color: #111827;
+  color: #e5e7eb;
+}
+
+.site-header,
+.site-footer {
+  background-color: #0b1220;
+  border-color: #243041;
+}
+
+.site-title,
+.site-nav .page-link,
+.footer-heading,
+a {
+  color: #93c5fd;
+}
+
+a:hover {
+  color: #dbeafe;
+}
+
+.page-content h1,
+.page-content h2,
+.page-content h3,
+.page-content h4,
+.page-content h5,
+.page-content h6 {
+  color: #f9fafb;
+}
+
+pre,
+code,
+blockquote {
+  background-color: #1f2937;
+  border-color: #374151;
+  color: #e5e7eb;
+}
+
+table th,
+table td {
+  border-color: #374151;
+}

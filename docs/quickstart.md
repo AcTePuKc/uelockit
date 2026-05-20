@@ -1,3 +1,9 @@
+---
+layout: page
+title: Quickstart
+permalink: /quickstart/
+---
+
 # Quickstart
 
 This is the shortest path from a source `.locres` file to a buildable translation workspace.

@@ -1,3 +1,9 @@
+---
+layout: page
+title: README
+permalink: /readme/
+---
+
 # UELocKit
 
 `UELocKit` is a small Unreal Engine localization modding toolkit for workflows based on existing game strings.

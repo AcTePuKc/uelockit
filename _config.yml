@@ -1,0 +1,13 @@
+title: UELocKit
+description: Toolkit and workflow for building Unreal Engine localization mods from existing .locres strings.
+theme: minima
+markdown: kramdown
+plugins:
+  - jekyll-seo-tag
+header_pages:
+  - README.md
+  - docs/index.md
+  - docs/quickstart.md
+  - docs/workflow.md
+  - docs/tools.md
+  - docs/iostore-packaging.md

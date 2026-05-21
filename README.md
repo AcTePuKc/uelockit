@@ -47,14 +47,6 @@ It is not a general framework for inventing brand-new localization keys and assu
 - Their own game-specific extracted localization files
 - Their own local copies of external tools
 
-## What this repo should not ship
-
-- Original game archives
-- Extracted proprietary game files
-- Bundled third-party binaries unless there is a deliberate reason to vendor them
-
-Users are expected to obtain those external inputs and tools themselves.
-
 ## Start here
 
 1. Read [docs/tools.md](./docs/tools.md)

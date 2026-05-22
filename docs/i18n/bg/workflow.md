@@ -9,6 +9,7 @@ permalink: /i18n/bg/workflow/
   <a href="{{ '/i18n/bg/' | relative_url }}">BG</a>
   <a href="{{ '/i18n/bg/quickstart/' | relative_url }}">Бърз старт</a>
   <a href="{{ '/i18n/bg/tools/' | relative_url }}">Инструменти</a>
+  <a href="{{ '/iostore-packaging/' | relative_url }}">Packaging</a>
 </nav>
 
 # Работен процес
@@ -169,6 +170,8 @@ python .\tools\check_source_update.py `
 ```
 
 <nav class="doc-nav">
+  <a href="{{ '/workflow/' | relative_url }}">Read this page in English</a>
   <a href="{{ '/i18n/bg/quickstart/' | relative_url }}">Назад: Бърз старт</a>
   <a href="{{ '/i18n/bg/tools/' | relative_url }}">Напред: Инструменти</a>
+  <a href="https://github.com/AcTePuKc/uelockit">GitHub Repo</a>
 </nav>

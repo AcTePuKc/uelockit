@@ -250,4 +250,5 @@ Toolkit-ът по подразбиране използва нещо като:
   <a href="{{ '/quickstart/' | relative_url }}">Read this page in English</a>
   <a href="{{ '/i18n/bg/' | relative_url }}">Назад: Начало</a>
   <a href="{{ '/i18n/bg/workflow/' | relative_url }}">Напред: Работен процес</a>
+  <a href="https://github.com/AcTePuKc/uelockit">GitHub Repo</a>
 </nav>

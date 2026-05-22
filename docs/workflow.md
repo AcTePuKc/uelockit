@@ -1,3 +1,17 @@
+---
+layout: page
+title: Workflow
+permalink: /workflow/
+---
+
+<nav class="doc-nav">
+  <a href="{{ '/' | relative_url }}">EN</a>
+  <a href="{{ '/i18n/bg/workflow/' | relative_url }}">BG</a>
+  <a href="{{ '/quickstart/' | relative_url }}">Quickstart</a>
+  <a href="{{ '/tools/' | relative_url }}">Tools</a>
+  <a href="{{ '/iostore-packaging/' | relative_url }}">Packaging</a>
+</nav>
+
 # Workflow
 
 ## High-level flow
@@ -170,3 +184,10 @@ Build without automatic deployment:
   -TranslationFormat json `
   -DeployToGame $false
 ```
+
+<nav class="doc-nav">
+  <a href="{{ '/i18n/bg/workflow/' | relative_url }}">Read this page in Bulgarian</a>
+  <a href="{{ '/quickstart/' | relative_url }}">Previous: Quickstart</a>
+  <a href="{{ '/tools/' | relative_url }}">Next: Tools</a>
+  <a href="https://github.com/AcTePuKc/uelockit">GitHub Repo</a>
+</nav>

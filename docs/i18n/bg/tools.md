@@ -9,6 +9,7 @@ permalink: /i18n/bg/tools/
   <a href="{{ '/i18n/bg/' | relative_url }}">BG</a>
   <a href="{{ '/i18n/bg/quickstart/' | relative_url }}">Бърз старт</a>
   <a href="{{ '/i18n/bg/workflow/' | relative_url }}">Работен процес</a>
+  <a href="{{ '/iostore-packaging/' | relative_url }}">Packaging</a>
 </nav>
 
 # Инструменти
@@ -159,6 +160,8 @@ Compatibility target:
 - game-specific reverse engineering извън този workflow
 
 <nav class="doc-nav">
+  <a href="{{ '/tools/' | relative_url }}">Read this page in English</a>
   <a href="{{ '/i18n/bg/workflow/' | relative_url }}">Назад: Работен процес</a>
-  <a href="{{ '/i18n/bg/' | relative_url }}">Назад към началото</a>
+  <a href="{{ '/iostore-packaging/' | relative_url }}">Напред: Packaging</a>
+  <a href="https://github.com/AcTePuKc/uelockit">GitHub Repo</a>
 </nav>

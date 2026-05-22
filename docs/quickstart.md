@@ -277,4 +277,6 @@ You must supply those yourself.
   <a href="{{ '/i18n/bg/quickstart/' | relative_url }}">Read this page in Bulgarian</a>
   <a href="{{ '/' | relative_url }}">Previous: Home</a>
   <a href="{{ '/workflow/' | relative_url }}">Next: Workflow</a>
+  <a href="https://github.com/AcTePuKc/uelockit">GitHub Repo</a>
 </nav>
+

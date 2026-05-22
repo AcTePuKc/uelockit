@@ -45,5 +45,6 @@ The pattern is reusable, but each game may differ in:
 <nav class="doc-nav">
   <a href="{{ '/tools/' | relative_url }}">Previous: Tools</a>
   <a href="{{ '/i18n/bg/' | relative_url }}">Open Bulgarian version</a>
+  <a href="https://github.com/AcTePuKc/uelockit">GitHub Repo</a>
   <a href="{{ '/' | relative_url }}">Back to Home</a>
 </nav>

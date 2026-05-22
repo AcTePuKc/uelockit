@@ -1,31 +1,19 @@
----
-layout: page
-title: Workflow
-permalink: /workflow/
----
-
-<nav class="doc-nav">
-  <a href="{{ '/' | relative_url }}">EN</a>
-  <a href="{{ '/i18n/bg/workflow/' | relative_url }}">BG</a>
-  <a href="{{ '/quickstart/' | relative_url }}">Quickstart</a>
-  <a href="{{ '/tools/' | relative_url }}">Tools</a>
-  <a href="{{ '/iostore-packaging/' | relative_url }}">Packaging</a>
-</nav>
-
 # Workflow
 
 ## High-level flow
 
 1. Obtain the source localization files from a game you are allowed to inspect for modding or personal translation use.
 2. Inspect or export the localization with your chosen tools.
-3. Initialize the workspace from the source `.locres`.
-4. Translate the `target` text while preserving keys and placeholders.
-5. Rebuild a translated `.locres`.
-6. Generate `.locmeta`.
-7. Package the result into `.pak`.
-8. Convert or package to `.utoc` and `.ucas` if the target game uses IO Store.
-9. Test in-game.
-10. Repeat for playtest fixes and terminology cleanup.
+3. Copy the extracted source files into `source/`.
+4. Initialize the workspace from the source `.locres`.
+5. Keep the extracted `Game.json` in `source/` for future patch comparisons.
+6. Translate the `target` text while preserving keys and placeholders.
+7. Rebuild a translated `.locres`.
+8. Generate `.locmeta`.
+9. Package the result into `.pak`.
+10. Convert or package to `.utoc` and `.ucas` if the target game uses IO Store.
+11. Test in-game.
+12. Repeat for playtest fixes and terminology cleanup.
 
 ## Suggested working files
 
@@ -40,9 +28,11 @@ Example:
 
 Common extracted source example:
 - `Output/.../en/Game.locres`
+- `Output/.../en/Game.json`
 
 Common local working convention inside `UELocKit`:
 - `source/Game.en.locres`
+- `source/Game.en.json`
 
 Preferred editing file:
 - edit `working/<target>.<culture>.json`
@@ -119,6 +109,25 @@ This generates:
 
 That is the missing bootstrap step before normal translation work starts.
 
+## Patch update checks
+
+When the game updates, extract the new source `Game.json` again and copy it into `source/`.
+
+Then compare it against your current working translation file:
+
+```powershell
+python .\tools\check_source_update.py `
+  --working .\working\Game.bg.json `
+  --source-json .\source\Game.en.json
+```
+
+That gives you a quick report for:
+- added keys
+- removed keys
+- changed source values
+
+This is the safest way to tell whether a new patch actually changed the localizable strings before you rebuild or continue translating.
+
 ## Build commands
 
 Build `.locres`:
@@ -145,9 +154,3 @@ Build without automatic deployment:
   -TranslationFormat json `
   -DeployToGame $false
 ```
-
-<nav class="doc-nav">
-  <a href="{{ '/i18n/bg/workflow/' | relative_url }}">Read this page in Bulgarian</a>
-  <a href="{{ '/quickstart/' | relative_url }}">Previous: Quickstart</a>
-  <a href="{{ '/tools/' | relative_url }}">Next: Tools</a>
-</nav>

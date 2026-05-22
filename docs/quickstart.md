@@ -16,12 +16,20 @@ permalink: /quickstart/
 
 This is the shortest path from a source `.locres` file to a buildable translation workspace.
 
+Prerequisites:
+- Python `3.10` or newer
+- PowerShell
+- `UnrealLocres`
+- `UnrealPak`
+- `retoc` if the target game uses IO Store
+
 ## 1. Extract or obtain the source localization
 
 Use your preferred inspection or extraction tool to obtain the source localization file from the game.
 
 Most commonly, you want something like:
 - `Game.locres`
+- `Game.json`
 
 If you extract with a tool such as FModel, you may end up with a path like:
 - `Output/.../en/Game.locres`
@@ -40,8 +48,11 @@ You do not need the extracted file itself to already be named `Game.en.locres`.
 For a default Unreal-style setup in this toolkit, the easiest convention is:
 - copy or point that extracted file to a clear local working path such as:
   - `source/Game.en.locres`
+  - `source/Game.en.json`
   - `source/Game.fr.locres`
+  - `source/Game.fr.json`
   - `source/Game.de.locres`
+  - `source/Game.de.json`
 
 If your project uses a different localization target name, you can reflect that in the config.
 
@@ -51,8 +62,11 @@ Place these in your local `UELocKit` workspace:
 
 - your source localization file somewhere accessible
   Example extracted path: `Output/.../en/Game.locres`
+- your source localization JSON somewhere accessible
+  Example extracted path: `Output/.../en/Game.json`
 - optionally copy it into `source/`
   Example local working path: `source/Game.en.locres`
+  Example local working path: `source/Game.en.json`
 - the required external tools somewhere on your machine
 
 You do not need to copy every tool into the repo folder if you prefer environment variables or explicit paths.
@@ -102,6 +116,12 @@ Environment variables supported:
 - `UNREALPAK_EXE`
 - `RETOC_EXE`
 
+Python requirement:
+- Python `3.10` or newer
+- `python` should work from a terminal before you continue
+
+`UELocKit` does not install Python automatically.
+
 ## 5. Initialize the workspace
 
 If you want the simplest command for Windows users:
@@ -130,6 +150,10 @@ This generates:
 
 The generated names depend on your target name and culture tag.
 
+If you also have the extracted source JSON, keep it in `source/` too.
+
+That gives you an easy way to compare future game updates against your current working translation file.
+
 ## 6. Translate
 
 Edit the generated JSON working file.
@@ -141,7 +165,45 @@ The generated CSV file exists for compatibility and import/export workflows, but
 Example:
 - `working/Game.bg.json`
 
-## 7. Build translated locres
+If you prefer to work in CSV, you can.
+
+Example:
+- `working/Game.bg.csv`
+
+You can convert between the two formats at any time:
+
+```powershell
+python .\tools\translation_io.py json-to-csv `
+  --input .\working\Game.bg.json `
+  --output .\working\Game.bg.csv
+```
+
+```powershell
+python .\tools\translation_io.py csv-to-json `
+  --input .\working\Game.bg.csv `
+  --output .\working\Game.bg.json
+```
+
+## 7. Check for changes after a game update
+
+When a game patch ships, extract the new source `Game.json` and copy it into `source/`.
+
+Then compare it against your current working translation file:
+
+```powershell
+python .\tools\check_source_update.py `
+  --working .\working\Game.bg.json `
+  --source-json .\source\Game.en.json
+```
+
+This reports:
+- added keys
+- removed keys
+- changed source values
+
+If there are no changes, you can keep translating in the same workspace.
+
+## 8. Build translated locres
 
 ```powershell
 & .\build-locres.ps1 `
@@ -149,7 +211,7 @@ Example:
   -TranslationFormat json
 ```
 
-## 8. Build the mod package
+## 9. Build the mod package
 
 ```powershell
 & .\tools\build-standalone-locmod.ps1 `
@@ -164,7 +226,7 @@ This generates:
 - `.utoc`
 - `.ucas`
 
-## 9. About the output package name
+## 10. About the output package name
 
 The output package name is configurable.
 

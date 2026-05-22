@@ -13,6 +13,9 @@
 
     # Optional explicit paths
     # SourceLocresPath = ".\source\Game.en.locres"
+    # Keep the matching source JSON in source\ as well when you can:
+    # Example: ".\source\Game.en.json"
+    # That file is used for patch/update comparison with tools\check_source_update.py
     # You can also point directly to an extracted file path such as:
     # SourceLocresPath = "D:\Extracted\Output\...\en\Game.locres"
     # TranslationJsonPath = ".\working\Game.bg.json"

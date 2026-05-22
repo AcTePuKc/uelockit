@@ -53,6 +53,8 @@ For a default Unreal-style setup in this toolkit, the easiest convention is:
   - `source/Game.fr.json`
   - `source/Game.de.locres`
   - `source/Game.de.json`
+  - `source/Game.tr.locres`
+  - `source/Game.tr.json`
 
 If your project uses a different localization target name, you can reflect that in the config.
 
@@ -77,10 +79,10 @@ There are two values to think about:
 
 - `CultureTag`
   Short folder/file tag used by the workspace
-  Example: `bg`, `pl`, `th`
+  Example: `bg`, `pl`, `th`, `tr`
 - `CultureCode`
   Full Unreal culture code used in `locmeta`
-  Example: `bg-BG`, `pl-PL`, `th-TH`
+  Example: `bg-BG`, `pl-PL`, `th-TH`, `tr-TR`
 
 You set those in:
 - `config/UELocKit.config.psd1`

@@ -19,3 +19,9 @@ tools/filelist-*.txt
 # OS/editor noise
 .DS_Store
 Thumbs.db
+# Keep empty example workspace folders
+!examples/subnautica2-tr-helper/source/
+!examples/subnautica2-tr-helper/source/.gitkeep
+!examples/subnautica2-tr-helper/working/
+!examples/subnautica2-tr-helper/working/.gitkeep
+

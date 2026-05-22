@@ -60,13 +60,11 @@ It is not a general framework for inventing brand-new localization keys and assu
 - Their own local copies of external tools
 - A local Python installation for the helper scripts
 
-## What this repo should not ship
+## External inputs
 
-- Original game archives
-- Extracted proprietary game files
-- Bundled third-party binaries unless there is a deliberate reason to vendor them
-
-Users are expected to obtain those external inputs and tools themselves.
+Users are expected to provide their own:
+- extracted game localization files
+- local copies of the required external tools
 
 ## Start here
 

@@ -53,8 +53,6 @@ For a default Unreal-style setup in this toolkit, the easiest convention is:
   - `source/Game.fr.json`
   - `source/Game.de.locres`
   - `source/Game.de.json`
-  - `source/Game.tr.locres`
-  - `source/Game.tr.json`
 
 If your project uses a different localization target name, you can reflect that in the config.
 
@@ -79,10 +77,10 @@ There are two values to think about:
 
 - `CultureTag`
   Short folder/file tag used by the workspace
-  Example: `bg`, `pl`, `th`, `tr`
+  Example: `bg`, `pl`, `th`
 - `CultureCode`
   Full Unreal culture code used in `locmeta`
-  Example: `bg-BG`, `pl-PL`, `th-TH`, `tr-TR`
+  Example: `bg-BG`, `pl-PL`, `th-TH`
 
 You set those in:
 - `config/UELocKit.config.psd1`
@@ -126,6 +124,8 @@ Python requirement:
 
 ## 5. Initialize the workspace
 
+Use this path if you are starting from scratch and do not already have a translated working file.
+
 If you want the simplest command for Windows users:
 
 ```powershell
@@ -156,7 +156,21 @@ If you also have the extracted source JSON, keep it in `source/` too.
 
 That gives you an easy way to compare future game updates against your current working translation file.
 
-## 6. Translate
+## 6. If you already have an existing translation
+
+If you already have a translation, do not treat `init_workspace` as the only entry point.
+
+Instead, convert or refresh the existing translation into the row-based working format and then keep translating there.
+
+Typical example:
+- source files go in `source/`
+- the existing translated JSON or `.locres` is used to generate:
+  - `working/<target>.<culture>.json`
+  - optionally `working/<target>.<culture>.csv`
+
+This is the right path when you want to continue an existing translation instead of starting with an empty `target`.
+
+## 7. Translate
 
 Edit the generated JSON working file.
 
@@ -186,7 +200,7 @@ python .\tools\translation_io.py csv-to-json `
   --output .\working\Game.bg.json
 ```
 
-## 7. Check for changes after a game update
+## 8. Check for changes after a game update
 
 When a game patch ships, extract the new source `Game.json` and copy it into `source/`.
 
@@ -205,7 +219,7 @@ This reports:
 
 If there are no changes, you can keep translating in the same workspace.
 
-## 8. Build translated locres
+## 9. Build translated locres
 
 ```powershell
 & .\build-locres.ps1 `
@@ -213,7 +227,7 @@ If there are no changes, you can keep translating in the same workspace.
   -TranslationFormat json
 ```
 
-## 9. Build the mod package
+## 10. Build the mod package
 
 ```powershell
 & .\tools\build-standalone-locmod.ps1 `
@@ -228,7 +242,7 @@ This generates:
 - `.utoc`
 - `.ucas`
 
-## 10. About the output package name
+## 11. About the output package name
 
 The output package name is configurable.
 

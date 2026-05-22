@@ -36,11 +36,6 @@ It is not a general framework for inventing brand-new localization keys and assu
 
 - [MIT License](./LICENSE)
 
-## Examples
-
-- [Subnautica 2 Turkish helper example](./examples/subnautica2-tr-helper/README.md)
-  A small example workspace for a nested translation JSON workflow based on the Turkish Subnautica 2 files.
-
 ## Repository structure
 
 - [build-locres.ps1](./build-locres.ps1)
@@ -65,6 +60,14 @@ It is not a general framework for inventing brand-new localization keys and assu
 - Their own local copies of external tools
 - A local Python installation for the helper scripts
 
+## What this repo should not ship
+
+- Original game archives
+- Extracted proprietary game files
+- Bundled third-party binaries unless there is a deliberate reason to vendor them
+
+Users are expected to obtain those external inputs and tools themselves.
+
 ## Start here
 
 1. Read [docs/tools.md](./docs/tools.md)
@@ -72,7 +75,9 @@ It is not a general framework for inventing brand-new localization keys and assu
 3. Copy [config/UELocKit.sample.config.psd1](./config/UELocKit.sample.config.psd1) to `config/UELocKit.config.psd1`
 4. Put your extracted source files in `source/`
 5. Point the config at your files and tools
-6. Initialize the working translation files
-7. Edit the generated JSON working file
+6. Choose one workflow:
+   - start from scratch and generate empty working files
+   - continue from an existing translation and convert or refresh it into the working format
+7. Edit the working JSON file
 8. On game updates, compare a new `source/Game.<lang>.json` against your existing working file
 9. Build and test

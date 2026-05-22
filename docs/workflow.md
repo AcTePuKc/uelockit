@@ -109,6 +109,22 @@ This generates:
 
 That is the missing bootstrap step before normal translation work starts.
 
+## Continuing from an existing translation
+
+If the user already has a translation, the goal is different:
+- do not start from an empty `target`
+- instead, convert or refresh the existing translation into the row-based working format
+- continue editing there
+
+This is the correct path for:
+- an existing translated `Game.json`
+- an existing translated `.locres`
+- a game-specific helper that imports another translation format into the standard working JSON
+
+In other words:
+- `init_workspace` is for a new translation
+- a refresh or import step is for an existing translation
+
 ## Patch update checks
 
 When the game updates, extract the new source `Game.json` again and copy it into `source/`.
